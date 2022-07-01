@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import errorMiddleware from './middlewares/Error';
 import routes from './routes';
 
 class App {
@@ -22,6 +23,7 @@ class App {
 
     this.app.use(accessControl);
     this.app.use(routes);
+    this.app.use(errorMiddleware);
   }
 
   public start(PORT: string | number):void {
