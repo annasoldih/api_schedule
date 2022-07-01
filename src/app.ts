@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import routes from './routes';
 
 class App {
   public app: express.Express;
@@ -20,6 +21,7 @@ class App {
     };
 
     this.app.use(accessControl);
+    this.app.use(routes);
   }
 
   public start(PORT: string | number):void {
