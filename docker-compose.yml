@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  scheduler_api:
+    build: .
+    environment:
+      - PORT=3001
+    container_name: scheduler
+

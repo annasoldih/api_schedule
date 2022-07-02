@@ -23,5 +23,4 @@ routes
   .route('/available')
   .post(Validation.checkInterval, AvailableController.get);
 
-
 export default routes;
